@@ -5,4 +5,8 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+	<string name="nav_guild_title">Guild multiverse</string>
+	<string name="nav_characters_title">Character list</string>
+	<string name="nav_legendary_title">Legendary tacking</string>
+	<string name="nav_favorites_title">Favorite list</string>
 </resources>

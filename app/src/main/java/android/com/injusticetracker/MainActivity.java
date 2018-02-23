@@ -12,6 +12,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.content.*;
+import android.com.injusticetracker.utils.*;
+import java.util.*;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -51,6 +54,8 @@ public class MainActivity extends AppCompatActivity
             super.onBackPressed();
         }
     }
+    
+    
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -77,16 +82,16 @@ public class MainActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
         int id = item.getItemId();
-
-        if (id == R.id.nav_camera) {
+        
+        if (id == R.id.nav_guild) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_characters) {
+          Intent chrList = new Intent(MainActivity.this, AllCharacters.class);
+		  startActivity(chrList);
+        } else if (id == R.id.nav_legendary) {
+			
+        } else if (id == R.id.nav_favorites) {
 
         } else if (id == R.id.nav_share) {
 
@@ -98,4 +103,5 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-}
+	
+	}
